@@ -38,6 +38,7 @@ return array(
         ),
         'urlManager' => array(
             'rules' => array(
+                '/' =>  'p3admin/default/index',
                 //rest url patterns
                 array('api/<model>/delete', 'pattern' => 'api/<model:\w+>/<_id:\d+>', 'verb' => 'DELETE'),
                 array('api/<model>/update', 'pattern' => 'api/<model:\w+>/<_id:\d+>', 'verb' => 'PUT'),
