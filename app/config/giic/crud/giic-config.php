@@ -28,7 +28,7 @@ foreach ($cruds AS $model => $table) {
     );
 
     if (in_array($model, array(
-        "Program",
+        //"Program",
     ))
     ) {
         $action["model"]["textEditor"] = "html5Editor";
