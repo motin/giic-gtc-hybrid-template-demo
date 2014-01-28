@@ -16,6 +16,11 @@ return array(
             'password' => DB_PASSWORD,
             'charset' => 'utf8',
         ),
+        'themeManager' => array(
+            'rules' => array(
+                '^program/(.*)' => 'backend2',
+            )
+        ),
     ),
 
 
