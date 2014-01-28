@@ -84,6 +84,8 @@ class ProgramController extends Controller
                     } else {
                         $this->redirect(array('view', 'id' => $model->id));
                     }
+                } else {
+                    throw new SaveException($model);
                 }
             } catch (Exception $e) {
                 $model->addError('id', $e->getMessage());

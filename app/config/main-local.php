@@ -6,6 +6,9 @@ return array(
     'params' => array(
         'env' => 'development'
     ),
+    'import' => array(
+        'application.exceptions.*',
+    ),
     'components' => array(
         // MySQL
         'db' => array(
