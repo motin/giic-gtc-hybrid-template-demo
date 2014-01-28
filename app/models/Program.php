@@ -66,6 +66,8 @@ class Program extends BaseProgram
             $this->date_utc = null;
         }
 
+        return parent::beforeSave();
+
     }
 
     protected function parseDateUtc($date_utc)
