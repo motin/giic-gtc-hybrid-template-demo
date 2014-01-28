@@ -45,7 +45,7 @@ class Program extends BaseProgram
     {
         // Store date in UTC
         try {
-            $date_utc = $this->parseDateUtc($this->date_utc);
+            $date_utc = Program::parseDateUtc($this->date_utc);
         } catch (Exception $e) {
             $this->addError('date_utc', Yii::t('app', 'Could not parse date'));
         }
@@ -59,7 +59,7 @@ class Program extends BaseProgram
 
         // Store date in UTC in a format that MySQL plays along with
         try {
-            $date_utc = $this->parseDateUtc($this->date_utc);
+            $date_utc = Program::parseDateUtc($this->date_utc);
             $date_utc->setTimezone(new DateTimeZone('UTC'));
             $this->date_utc = $date_utc->format("Y-m-d H:i:s");
         } catch (Exception $e) {
@@ -70,7 +70,7 @@ class Program extends BaseProgram
 
     }
 
-    protected function parseDateUtc($date_utc)
+    static public function parseDateUtc($date_utc)
     {
         // Recognized formats
         $formats = array(
@@ -80,6 +80,22 @@ class Program extends BaseProgram
         );
         foreach ($formats as $format) {
             $parsed = DateTime::createFromFormat($format, $date_utc, new DateTimeZone('UTC')); // TODO: Check how UTC works as argument when input includes timezone offset
+            if (!empty($parsed)) {
+                break;
+            }
+        }
+        return $parsed;
+    }
+
+    static public function parseTime($date_utc)
+    {
+        // Recognized formats
+        $formats = array(
+            "H:i:s",
+            "H:i",
+        );
+        foreach ($formats as $format) {
+            $parsed = DateTime::createFromFormat($format, $date_utc, new DateTimeZone('UTC'));
             if (!empty($parsed)) {
                 break;
             }
