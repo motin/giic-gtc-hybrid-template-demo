@@ -3,6 +3,7 @@
 // ----------------
 
 $crudModels = DataModel::crudModels();
+$internalModels = array();
 
 // merge
 $cruds = array_merge($crudModels);
