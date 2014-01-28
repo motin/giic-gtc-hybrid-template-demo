@@ -3,6 +3,7 @@
 require('secrets.php');
 
 return array(
+    'name' => 'Phundament / Giic / GTC / Hybrid template / Wrest Demo',
     'params' => array(
         'env' => 'development'
     ),
@@ -38,7 +39,6 @@ return array(
         ),
         'urlManager' => array(
             'rules' => array(
-                '/' =>  'p3admin/default/index',
                 //rest url patterns
                 array('api/<model>/delete', 'pattern' => 'api/<model:\w+>/<_id:\d+>', 'verb' => 'DELETE'),
                 array('api/<model>/update', 'pattern' => 'api/<model:\w+>/<_id:\d+>', 'verb' => 'PUT'),

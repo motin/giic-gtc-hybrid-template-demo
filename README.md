@@ -5,7 +5,7 @@ An app with a generated CRUD and REST API with XML-output
 
 Features:
 
- * [Sample generated CRUD](http://yiiamplified.com/giic-gtc-hybrid-template-demo/program)
+ * [Sample generated CRUD](http://yiiamplified.com/giic-gtc-hybrid-template-demo/program) (login: admin/admin)
  * [Sample XML-output](http://yiiamplified.com/giic-gtc-hybrid-template-demo/api/program/list)
 
 This app has been based on the following custom data model:
@@ -23,7 +23,7 @@ This app has been based on the following custom data model:
     ENGINE = InnoDB
     DEFAULT CHARACTER SET = utf8
     COLLATE = utf8_bin;
-Based on the following Yii extension projects:
+Based on [Yii](http://yiiframework.com) and the following extension projects:
 
  * [Phundament](http://phundament.com)
  * [Giic](http://www.yiiframework.com/extension/giic/)
