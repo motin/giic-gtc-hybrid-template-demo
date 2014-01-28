@@ -1,6 +1,6 @@
 <?php
 
-// Use this file as main-local.php to override settings only on your local machine
+require('secrets.php');
 
 return array(
     'params' => array(
@@ -8,13 +8,15 @@ return array(
     ),
     'components' => array(
         // MySQL
-        /*'db'            => array(
-            'tablePrefix'      => '',
-            'connectionString' => 'mysql:host=localhost;dbname=p3',
+        'db' => array(
+            'tablePrefix' => '',
+            'connectionString' => 'mysql:host=localhost;dbname=gtc_demo',
             'emulatePrepare' => true,
-            'username' => 'test',
-            'password' => 'test',
+            'username' => 'gtcdemo',
+            'password' => DB_PASSWORD,
             'charset' => 'utf8',
-        ),*/
-    )
+        ),
+    ),
+
+
 );
