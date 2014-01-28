@@ -34,6 +34,10 @@
             "url":"https://github.com/Quexer69/yii.translate.git"
         },
         {
+            "type":"vcs",
+            "url":"https://github.com/neam/wrest"
+        },
+        {
             "type":"composer",
             "url":"http://packages.phundament.com"
         }
@@ -66,7 +70,8 @@
         "yiiext/migrate-command":"dev-master#35f315b as 0.7.2.1",
         "yiisoft/yii":"1.1.14",
         "nordsoftware/yii-utils": "@dev",
-        "mikehaertl/translatable": "~1.1.0"
+        "mikehaertl/translatable": "~1.1.0",
+        "weavora/wrest": "dev-awaiting-prs"
     },
     "require-dev":{
         "cloudhead/less.js":"1.3.*",
