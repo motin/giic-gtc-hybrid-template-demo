@@ -29,7 +29,9 @@ $this->widget(
 $this->beginWidget('CMarkdown');
 $readme = Yii::app()->basePath . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'README.md';
 if (is_file($readme)) {
-    echo file_get_contents($readme);
+    // Output everything after first heading only
+    $_ = explode("==========", file_get_contents($readme));
+    echo $_[1];
 }
 $this->endWidget();
 ?>
