@@ -12,4 +12,13 @@ class DataModel
 
     }
 
-} 
+    static public function restModels()
+    {
+
+        return array(
+            'Program' => 'program',
+        );
+
+    }
+
+}
