@@ -11,8 +11,8 @@
     </div>
 
     <div class="row">
-        <?php echo $form->label($model, 'date_umt'); ?>
-        <?php echo $form->textField($model, 'date_umt'); ?>
+        <?php echo $form->label($model, 'date_utc'); ?>
+        <?php echo $form->textField($model, 'date_utc'); ?>
     </div>
 
     <div class="row">

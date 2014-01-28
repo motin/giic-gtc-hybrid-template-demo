@@ -17,8 +17,8 @@ $this->breadcrumbs[] = $model->id;
 <?php echo CHtml::link(CHtml::encode($model->id), array('view', 'id' => $model->id)); ?>
 <br/>
 
-<b><?php echo CHtml::encode($model->getAttributeLabel('date_umt')); ?>:</b>
-<?php echo CHtml::encode($model->date_umt); ?>
+<b><?php echo CHtml::encode($model->getAttributeLabel('date_utc')); ?>:</b>
+<?php echo CHtml::encode($model->date_utc); ?>
 <br/>
 
 <b><?php echo CHtml::encode($model->getAttributeLabel('start_time')); ?>:</b>
@@ -77,13 +77,13 @@ $this->breadcrumbs[] = $model->id;
                             )
                     ),
                     array(
-                        'name' => 'date_umt',
+                        'name' => 'date_utc',
                         'type' => 'raw',
                         'value' => $this->widget(
                                 'TbEditableField',
                                 array(
                                     'model' => $model,
-                                    'attribute' => 'date_umt',
+                                    'attribute' => 'date_utc',
                                     'url' => $this->createUrl('/program/editableSaver'),
                                 ),
                                 true

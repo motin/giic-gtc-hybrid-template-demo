@@ -3,7 +3,7 @@
 
         <div class="form-horizontal">
 
-            <?php echo $form->textFieldRow($model, 'date_umt'); ?>
+            <?php echo $form->textFieldRow($model, 'date_utc'); ?>
 
             <?php echo $form->textFieldRow($model, 'start_time'); ?>
 

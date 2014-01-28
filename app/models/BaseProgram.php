@@ -5,7 +5,7 @@
  *
  * Columns in table "program" available as properties of the model:
  * @property string $id
- * @property string $date_umt
+ * @property string $date_utc
  * @property string $start_time
  * @property string $leadtext
  * @property string $name
@@ -32,18 +32,18 @@ abstract class BaseProgram extends ActiveRecord
     {
         return array_merge(
             parent::rules(), array(
-                array('date_umt, start_time, leadtext, name, b_line, synopsis, url', 'default', 'setOnEmpty' => true, 'value' => null),
+                array('date_utc, start_time, leadtext, name, b_line, synopsis, url', 'default', 'setOnEmpty' => true, 'value' => null),
                 array('name, b_line', 'length', 'max' => 150),
                 array('url', 'length', 'max' => 255),
-                array('date_umt, start_time, leadtext, synopsis', 'safe'),
-                array('id, date_umt, start_time, leadtext, name, b_line, synopsis, url', 'safe', 'on' => 'search'),
+                array('date_utc, start_time, leadtext, synopsis', 'safe'),
+                array('id, date_utc, start_time, leadtext, name, b_line, synopsis, url', 'safe', 'on' => 'search'),
             )
         );
     }
 
     public function getItemLabel()
     {
-        return (string)$this->date_umt;
+        return (string)$this->date_utc;
     }
 
     public function behaviors()
@@ -68,7 +68,7 @@ abstract class BaseProgram extends ActiveRecord
     {
         return array(
             'id' => Yii::t('model', 'ID'),
-            'date_umt' => Yii::t('model', 'Date Umt'),
+            'date_utc' => Yii::t('model', 'Date Utc'),
             'start_time' => Yii::t('model', 'Start Time'),
             'leadtext' => Yii::t('model', 'Leadtext'),
             'name' => Yii::t('model', 'Name'),
@@ -85,7 +85,7 @@ abstract class BaseProgram extends ActiveRecord
         }
 
         $criteria->compare('t.id', $this->id, true);
-        $criteria->compare('t.date_umt', $this->date_umt, true);
+        $criteria->compare('t.date_utc', $this->date_utc, true);
         $criteria->compare('t.start_time', $this->start_time, true);
         $criteria->compare('t.leadtext', $this->leadtext, true);
         $criteria->compare('t.name', $this->name, true);

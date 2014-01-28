@@ -63,7 +63,7 @@ $this->widget('TbGridView',
             ),
             array(
                 'class' => 'TbEditableColumn',
-                'name' => 'date_umt',
+                'name' => 'date_utc',
                 'editable' => array(
                     'url' => $this->createUrl('/program/editableSaver'),
                     //'placement' => 'right',

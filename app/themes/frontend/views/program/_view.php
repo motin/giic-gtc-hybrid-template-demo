@@ -4,8 +4,8 @@
     <?php echo CHtml::link(CHtml::encode($data->id), array('program/view', 'id' => $data->id)); ?>
     <br/>
 
-    <b><?php echo CHtml::encode($data->getAttributeLabel('date_umt')); ?>:</b>
-    <?php echo CHtml::encode($data->date_umt); ?>
+    <b><?php echo CHtml::encode($data->getAttributeLabel('date_utc')); ?>:</b>
+    <?php echo CHtml::encode($data->date_utc); ?>
     <br/>
 
     <b><?php echo CHtml::encode($data->getAttributeLabel('start_time')); ?>:</b>
