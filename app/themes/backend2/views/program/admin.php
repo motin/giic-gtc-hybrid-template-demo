@@ -61,6 +61,8 @@ $this->widget('TbGridView',
                     //'placement' => 'right',
                 )
             ),
+            'date_utc',
+            /*
             array(
                 'class' => 'TbEditableColumn',
                 'name' => 'date_utc',
@@ -69,6 +71,7 @@ $this->widget('TbGridView',
                     //'placement' => 'right',
                 )
             ),
+            */
             array(
                 'class' => 'TbEditableColumn',
                 'name' => 'start_time',
