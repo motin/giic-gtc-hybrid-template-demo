@@ -77,6 +77,8 @@ class ProgramController extends AppRestController
                                 $start_time = Program::parseTime($r["program.$key"]);
                                 $result["start_time"] = $start_time->format("H:i");
                                 break;
+                            case "id":
+                                break;
                             default:
                                 $result[$key] = $r["program.$key"];
                         }
