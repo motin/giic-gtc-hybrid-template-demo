@@ -21,7 +21,9 @@ return array(
         ),
         'themeManager' => array(
             'rules' => array(
-                '^program/(.*)' => 'backend2',
+                '^program/admin' => 'backend2',
+                '^program/update' => 'backend2',
+                '^program/create' => 'backend2',
             )
         ),
     ),
