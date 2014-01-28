@@ -12,6 +12,9 @@ $webConfig  = CMap::mergeArray($main, $local);
 
 // for testing purposes
 return array(
+    'import' => array(
+        'application.components.*',
+    ),
     'commandMap' => array(
         'migrate' => array(
             // enable eg. data migrations for your local machine
