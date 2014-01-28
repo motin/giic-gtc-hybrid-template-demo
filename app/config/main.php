@@ -399,9 +399,9 @@ return array(
         ),
         'urlManager'    => array(
             'class'          => 'vendor.phundament.p3extensions.components.P3LangUrlManager',
-            'showScriptName' => true, // enable mod_rewrite in .htaccess if this is set to false
+            'showScriptName' => false, // enable mod_rewrite in .htaccess if this is set to false
             'appendParams'   => false, // in general more error resistant
-            'urlFormat'      => 'get', // use 'path', otherwise rules below won't work
+            'urlFormat'      => 'path', // use 'path', otherwise rules below won't work
             'rules'          => array(
                 // backend
                 'phundament' => 'p3admin/default/index',
